@@ -3,6 +3,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UsersService} from '../../shared/services/users.service';
 import {User} from '../../shared/models/user.model';
 import {Message} from '../../shared/models/message.model';
+import {AuthService} from '../../shared/services/auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'wfm-login',
@@ -11,7 +13,10 @@ import {Message} from '../../shared/models/message.model';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private usersService:UsersService) { }
+  constructor(
+		private authService:AuthService, 
+		private usersService:UsersService,
+		private router:Router) { }
 
 
   form:FormGroup; 
@@ -41,7 +46,12 @@ export class LoginComponent implements OnInit {
 //		console.log(user);
 		if(user){
 			if(user.password===formData.password)
-			{}
+			{
+				this.message.text='';
+				window.localStorage.setItem('user',JSON.stringify(user));
+				this.authService.login();
+//				this.router.navigate(['']);
+			}
 			else{
 				this.showMessage('Пароль введен неправильно');
 			}
