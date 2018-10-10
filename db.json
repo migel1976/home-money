@@ -29,6 +29,12 @@
       "password": "23445466",
       "name": "test",
       "id": 5
+    },
+    {
+      "email": "migel1976@gmail.ru",
+      "password": "nmvnhdfhfdfd",
+      "name": "Mikhail Sergeevich Smirnov",
+      "id": 6
     }
   ],
   "bill": {
