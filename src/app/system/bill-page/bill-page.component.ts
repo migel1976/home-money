@@ -4,8 +4,8 @@ import { BillService } from '../shared/services/bill.service';
 import { Bill } from '../shared/models/bill.model';
 import { Subscription } from 'rxjs/Subscription';
 //import { combineLatest } from 'rxjs';
-//import 'rxjs/add/observable/combineLatest';
-import 'rxjs/add/operator/combineLatest';
+import 'rxjs/add/observable/combineLatest';
+//import 'rxjs/add/operator/combineLatest';
 
 @Component({
   selector: 'wfm-bill-page',
@@ -18,19 +18,22 @@ export class BillPageComponent implements OnInit, OnDestroy {
 
   subscription:Subscription;
   ngOnInit() {
+	this.billService.getBill()
+		.subscribe((bill:Bill)=>{console.log(bill)});
 
-//	this.subscription=
-Observable.combineLatest(
+	this.billService.getCurrency()
+		.subscribe((money:any)=>console.log(money));
 	
-		this.billService.getBill(),
-		this.billService.getCurrency()
-		).subscribe((data:[Bill,any])=>{
-			console.log(data)});
-
+//	this.subscription=
+//Observable.combineLatest(
+//		this.billService.getBill(),
+//		this.billService.getCurrency()
+//		).subscribe((data:[any,any])=>{
+//			console.log(data)});
   }
 
   ngOnDestroy(){
-//	this.subscription.unsubscribe();
+	this.subscription.unsubscribe();
 	}
 
 }
