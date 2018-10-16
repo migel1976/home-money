@@ -8,7 +8,7 @@
     },
     {
       "email": "migel1976@gmail.com",
-      "password": "123456",
+      "password": "lalala",
       "name": "Mikhail Sergeevich Smirnov",
       "id": 2
     },
@@ -35,6 +35,12 @@
       "password": "nmvnhdfhfdfd",
       "name": "Mikhail Sergeevich Smirnov",
       "id": 6
+    },
+    {
+      "email": "rrewrwe@fffk.cov",
+      "password": "lalala",
+      "name": "djsaflsfjs",
+      "id": 7
     }
   ],
   "bill": {
