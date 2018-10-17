@@ -17,12 +17,12 @@
               <tr>
                 <td>Доллар</td>
                 <td>1</td>
-                <td>{{today | date:'dd.MM.yyyy'}}</td>
+                <td>{{today | wfmMoment}}</td>
               </tr>
               <tr *ngFor="let c of currencyArray">
                 <td>{{c}}</td>
-                <td>{{currency.qoutes[c]}}</td>
-                <td>{{today | date:'dd.MM.yyyy'}}</td>  
+                <td>{{currency.quotes[c]}}</td>
+                <td>{{today | wfmMoment}}</td>  
               </tr>
               
               </tbody>
