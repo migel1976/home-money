@@ -38,11 +38,15 @@ export class BillPageComponent implements OnInit, OnDestroy {
 		.subscribe((bill:Bill)=>{
 				console.log(bill);
 				this.bill=bill;
-				this.isLoaded=true;
+				//this.isLoaded=true;
 				});
 
 	this.billService.getCurrency()
-		.subscribe((money:any)=>console.log(money));
+		.subscribe((money:any)=>{
+				console.log(money)
+				this.currency=money;	
+				this.isLoaded=true;
+				});
 	
 //	this.subscription=
 //Observable.combineLatest(

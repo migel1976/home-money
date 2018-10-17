@@ -26,7 +26,9 @@ export class BillService extends BaseApi{
 
 */
 	getCurrency(base: string = 'RUB'): Observable<any> {
-		    return this.http.get(`http://data.fixer.io/lates?base=${base}`)
+//		    return this.http.get(`http://data.fixer.io/lates?access_key=9e0efcac42c9a4baef2f283b98357f6b&base=${base}`)
+///		    return this.http.get(`http://apilayer.net/api/live?access_key=9e0efcac42c9a4baef2f283b98357f6b&source=${base}`)
+		    return this.http.get(`http://apilayer.net/api/live?access_key=9e0efcac42c9a4baef2f283b98357f6b`)
 			.map((response: any) => response.json());
 	  }
 
