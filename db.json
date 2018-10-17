@@ -11,40 +11,10 @@
       "password": "lalala",
       "name": "Mikhail Sergeevich Smirnov",
       "id": 2
-    },
-    {
-      "email": "aslkj@hkdljl.com",
-      "password": "32534tgef",
-      "name": "gdssgdgfdg",
-      "id": 3
-    },
-    {
-      "email": "migel1976@gmail.com",
-      "password": "jlkjlkjllkjljkl",
-      "name": "test",
-      "id": 4
-    },
-    {
-      "email": "aloha@gmail.com",
-      "password": "23445466",
-      "name": "test",
-      "id": 5
-    },
-    {
-      "email": "migel1976@gmail.ru",
-      "password": "nmvnhdfhfdfd",
-      "name": "Mikhail Sergeevich Smirnov",
-      "id": 6
-    },
-    {
-      "email": "rrewrwe@fffk.cov",
-      "password": "lalala",
-      "name": "djsaflsfjs",
-      "id": 7
     }
-  ],
+ ],
   "bill": {
-    "value": 100000,
+    "value": 136,
     "currency": "RUB"
   },
   "categories": [
