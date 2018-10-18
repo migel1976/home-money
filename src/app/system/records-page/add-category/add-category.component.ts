@@ -15,7 +15,10 @@ export class AddCategoryComponent implements OnInit {
 
   onSubmit(form:NgForm){
 
+	let { name, capacity } = form.value;
+	if (capacity<0) capacity*=-1;
  	console.log(form.value);
+	console.log('capacity :', capacity);
 
 
 	}
