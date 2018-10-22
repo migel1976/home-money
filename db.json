@@ -12,7 +12,7 @@
       "name": "Mikhail Sergeevich Smirnov",
       "id": 2
     }
- ],
+  ],
   "bill": {
     "value": 1360345,
     "currency": "RUB"
@@ -32,6 +32,21 @@
       "id": 3,
       "name": "Машина",
       "capacity": 7000
+    },
+    {
+      "name": "паапвыапв",
+      "capacity": 16,
+      "id": 4
+    },
+    {
+      "name": "test3232",
+      "capacity": 5656,
+      "id": 5
+    },
+    {
+      "name": "ппвпваваппавоавроп",
+      "capacity": "1",
+      "id": 6
     }
   ],
   "events": [
