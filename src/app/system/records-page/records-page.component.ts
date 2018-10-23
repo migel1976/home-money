@@ -20,6 +20,7 @@ export class RecordsPageComponent implements OnInit {
 	this.categoryService.getCategories()
 	.subscribe((categories:Category[])=>
 		{
+			console.log('records-page.component', categories);
 			this.categories=categories;
 			this.isLoaded=true;
 		})
