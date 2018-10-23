@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter}   from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output}   from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { CategoryService} from '../../shared/services/category.service';
 import { Category } from '../../shared/models/category.model';
@@ -13,7 +13,7 @@ import { Category } from '../../shared/models/category.model';
 export class AddCategoryComponent implements OnInit {
 
 
-  @Output onCategoryAdd = new EventEmitter<Category>();
+  @Output() onCategoryAdd = new EventEmitter<Category>();
   
 
   constructor(private categoryService:CategoryService) {
