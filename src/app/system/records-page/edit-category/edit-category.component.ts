@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input, EventEmitter, Output} from '@angular/core';
 import {NgForm} from '@angular/forms';
+import {Category} from '../../shared/models/category.model';
+
 
 @Component({
   selector: 'wfm-edit-category',
@@ -10,6 +12,8 @@ export class EditCategoryComponent implements OnInit {
 
   constructor() { }
 
+  @Input() categories:Category[]=[];
+  @Output() onCategoryEdit=new EventEmitter<Category>();
   ngOnInit() {
 	
   }

@@ -14,16 +14,19 @@ export class RecordsPageComponent implements OnInit {
  }
 
   categories:Category[]=[];
+  isLoaded=false;
+ 
   ngOnInit() {
 	this.categoryService.getCategories()
 	.subscribe((categories:Category[])=>
 		{
 			this.categories=categories;
+			this.isLoaded=true;
 		})
   }
 
   newCategoryAdd(category:Category){
-   console.log(category);
-  }
+	this.categories.push(category);  
+}
 
 }

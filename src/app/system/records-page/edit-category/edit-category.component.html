@@ -12,7 +12,11 @@
 		class="form-control"
 		id="e-select-category"			
 		>
-		<option>1</option>
+		<option 
+		   *ngFor="let c of categories"
+		   [value]="c.id">
+			{{c.name}}
+		</option>
 	    </select>			
 	  </div>
             <div 
@@ -30,13 +34,13 @@
 		required
 		>
               <span
-		 *ngIf="name.invalid && named.touched" 
+		 *ngIf="name.invalid && name.touched" 
 		 class="form-help-text">
 			Название категории не может быть пустым:</span>
             </div>
             <div 
 	       class="form-group"
-	       [ngClass]="{'has-error':number.invalid && number.touched}"
+	       [ngClass]="{'has-error':capacity.invalid && capacity.touched}"
 	      >
               <label class="control-label" for="e-category-value">Введите лимит</label>
               <input
