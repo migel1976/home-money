@@ -14,11 +14,19 @@ export class EditCategoryComponent implements OnInit {
 
   @Input() categories:Category[]=[];
   @Output() onCategoryEdit=new EventEmitter<Category>();
+  currentCategoryId=34;
+  currentCategory:Category;
   ngOnInit() {
-	
+	this.onCategoryChange();	
   }
 
   onSubmit(form:NgForm){
 	}
+ 
+  onCategoryChange(){
+	console.log(this.currentCategoryId);
+	this.currentCategory=this.categories
+	.find(c=>c.id===+this.currentCategoryId);
+		}
 
 }
