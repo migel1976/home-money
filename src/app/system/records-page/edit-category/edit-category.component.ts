@@ -14,7 +14,7 @@ export class EditCategoryComponent implements OnInit {
 
   @Input() categories:Category[]=[];
   @Output() onCategoryEdit=new EventEmitter<Category>();
-  currentCategoryId=34;
+  currentCategoryId=4;
   currentCategory:Category;
   ngOnInit() {
 	this.onCategoryChange();	

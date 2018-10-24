@@ -12,7 +12,7 @@
 		class="form-control"
 		id="e-select-category"			
 		[(ngModel)]="currentCategoryId"
-		change="onCategoryChange()"
+		(change)="onCategoryChange()"
 		[ngModelOptions]="{standalone:true}" 
 		>
 		<option 
