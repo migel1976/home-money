@@ -19,5 +19,8 @@ export class CategoryService extends BaseApi{
 	getCategories():Observable<Category[]>{
 		return this.get('categories');}
 
-} 
 
+	updateCategory(category:Category):Observable<Category>{
+		return this.put(`categories/${category.id}`,category);
+		}
+} 

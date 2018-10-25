@@ -30,4 +30,8 @@ export class RecordsPageComponent implements OnInit {
 	this.categories.push(category);  
 }
 
+
+ categoryWasEdited(category:Category){
+	
+
 }

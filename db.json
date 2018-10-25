@@ -72,6 +72,16 @@
       "name": "поебень",
       "capacity": 1976,
       "id": 11
+    },
+    {
+      "name": "test456676",
+      "capacity": 15556,
+      "id": 12
+    },
+    {
+      "name": "пое",
+      "capacity": 12342,
+      "id": 13
     }
   ],
   "events": [

@@ -1,6 +1,7 @@
 import { Component, OnInit , Input, EventEmitter, Output} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {Category} from '../../shared/models/category.model';
+import {CategoryService} from '../../shared/services/category.service';
 
 
 @Component({
@@ -10,7 +11,7 @@ import {Category} from '../../shared/models/category.model';
 })
 export class EditCategoryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private categoryService:CategoryService) { }
 
   @Input() categories:Category[]=[];
   @Output() onCategoryEdit=new EventEmitter<Category>();
@@ -20,7 +21,20 @@ export class EditCategoryComponent implements OnInit {
 	this.onCategoryChange();	
   }
 
+
+
   onSubmit(form:NgForm){
+	let {capacity,name}=form.value;
+	if(capacity<0) capacity*=-1;
+
+  	const category = new Category(name,capacity,+this.currentCategoryId);
+
+	this.categoryService.updateCategory(category)
+	.subscribe((category:Category)=>{
+			console.log(category);
+			this.onCategoryEdit.emit(category);
+		}
+	)
 	}
  
   onCategoryChange(){
