@@ -60,7 +60,11 @@
 		*ngIf="capacity.invalid && capacity.touched"
 		class="form-help-text">Проверьте правильны ли введены данные</span>
             </div>
-            <button type="submit" class="btn btn-primary">Добавить</button>
+            <button 
+		type="submit"
+		class="btn btn-primary"
+		[disabled]="f.invalid"
+		>Добавить</button>
           </form>
         </div>
       </div>
